@@ -109,17 +109,17 @@ if(BUILD_PYTHON)
 
 	#set(Boost_USE_DEBUG_PYTHON OFF)
 
-	find_package(PythonInterp 2.7 REQUIRED)
-	find_package(PythonLibs 2.7 REQUIRED)
+	find_package(PythonInterp 3.5 REQUIRED)
+	find_package(PythonLibs 3.5 REQUIRED)
 	find_package(NumPy REQUIRED)
-	find_package(Boost COMPONENTS python REQUIRED)
+	find_package(Boost COMPONENTS python3 REQUIRED)
 
 	set(VIZDOOM_PYTHON_SRC_DIR ${VIZDOOM_SRC_DIR}/lib_python)
 	set(VIZDOOM_PYTHON_INCLUDE_DIR ${VIZDOOM_INCLUDE_DIR} ${VIZDOOM_PYTHON_SRC_DIR})
 
 	set(VIZDOOM_PYTHON_LIBS
 		${VIZDOOM_LIBS}
-		${Boost_PYTHON_LIBRARY}
+		${Boost_PYTHON3_LIBRARY}
 		${PYTHON_LIBRARIES}
 		${NUMPY_LIBRARIES})
 
